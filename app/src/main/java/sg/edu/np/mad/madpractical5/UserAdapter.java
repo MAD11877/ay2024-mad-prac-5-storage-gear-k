@@ -22,10 +22,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         void onFollowButtonClick(User user);
     }
 
+    // Constructor for normal use
     public UserAdapter(List<User> userList, Context context, OnFollowButtonClickListener listener) {
         this.userList = userList;
         this.context = context;
         this.listener = listener;
+    }
+
+    // Constructor for testing
+    public UserAdapter(List<User> userList) {
+        this.userList = userList;
+        this.context = null;
+        this.listener = null;
     }
 
     @NonNull
@@ -40,9 +48,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         User user = userList.get(position);
         holder.nameTextView.setText(user.name);
         holder.descriptionTextView.setText(user.description);
-        holder.followButton.setText(user.followed ? "Unfollow" : "Follow");
 
-        holder.followButton.setOnClickListener(v -> listener.onFollowButtonClick(user));
+        if (listener != null) {
+            holder.followButton.setText(user.followed ? "Unfollow" : "Follow");
+            holder.followButton.setOnClickListener(v -> listener.onFollowButtonClick(user));
+        } else {
+            holder.followButton.setVisibility(View.GONE); // or keep it visible without any click action
+        }
     }
 
     @Override
