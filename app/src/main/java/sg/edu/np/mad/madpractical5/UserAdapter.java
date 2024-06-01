@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-
 import sg.edu.np.mad.madpractical4.R;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
@@ -29,10 +28,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         this.listener = listener;
     }
 
-    // Constructor for testing
+    // Constructor for testing or cases where context and listener are not needed
     public UserAdapter(List<User> userList) {
         this.userList = userList;
         this.context = null;
+        this.listener = null;
+    }
+
+    // Constructor to handle the case where the context is null
+    public UserAdapter(List<User> userList, Context context) {
+        this.userList = userList;
+        this.context = context;
         this.listener = null;
     }
 
