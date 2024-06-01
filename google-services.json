@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048185645893",
+    "project_id": "madpractical-5bb13",
+    "storage_bucket": "madpractical-5bb13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048185645893:android:02af38c5199f38aa746c2c",
+        "android_client_info": {
+          "package_name": "sg.edu.np.mad.madpractical6"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZogRQ2KaCDDvhgsLwthcB0ndB0U8b6aU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

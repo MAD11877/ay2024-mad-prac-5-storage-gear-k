@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnFollow" type="id" />
+    <item name="main" type="id" />
+    <item name="tvName" type="id" />
+    <item name="textViewMain" type="id" />
+    <item name="tvDescription" type="id" />
+    <item name="btnMessage" type="id" />
+    <item name="buttonGroup1" type="id" />
+    <item name="buttonGroup2" type="id" />
+</resources>
