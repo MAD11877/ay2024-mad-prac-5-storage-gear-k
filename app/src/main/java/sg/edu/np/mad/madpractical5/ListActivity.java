@@ -1,4 +1,4 @@
-package sg.edu.np.mad.madpractical6;
+package sg.edu.np.mad.madpractical5;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
